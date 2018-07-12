@@ -52,11 +52,11 @@ public class CameraRecorderActivity extends AppCompatActivity{
         mSurfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
-//                GroupFilter filter=new GroupFilter(getResources());
-//                mCamera.setRenderer(filter);
-//                filter.addFilter(new StickFigureFilter(getResources()));
-//                filter.addFilter(new BeautyFilter(getResources()).setBeautyLevel(4));
-//                filter.addFilter(new WaterMarkFilter().setMarkPosition(30,10,100,76).setMark(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher)));
+                GroupFilter filter=new GroupFilter(getResources());
+                mCamera.setRenderer(filter);
+                filter.addFilter(new StickFigureFilter(getResources()));
+                filter.addFilter(new BeautyFilter(getResources()).setBeautyLevel(4));
+                filter.addFilter(new WaterMarkFilter().setMarkPosition(30,10,100,76).setMark(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher)));
             }
 
             @Override
