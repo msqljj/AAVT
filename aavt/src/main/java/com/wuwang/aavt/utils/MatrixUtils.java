@@ -29,18 +29,57 @@ public enum MatrixUtils {
     public static final int TYPE_CENTERINSIDE=2;
     public static final int TYPE_FITSTART=3;
     public static final int TYPE_FITEND=4;
+    
+     public static final float TEXTURE_NO_ROTATION[] = {
+            0.0f, 0.0f,
+            0.0f, 1.0f,
+            1.0f, 0.0f,
+            1.0f, 1.0f,
+    };
+
+    //逆时针90度
+    public static final float TEXTURE_ROTATED_90[] = {
+            0.0f, 1.0f,
+            1.0f, 1.0f,
+            0.0f, 0.0f,
+            1.0f, 0.0f,
+    };
+
+    //逆时针180度
+    public static final float TEXTURE_ROTATED_180[] = {
+            1.0f, 1.0f,
+            1.0f, 0.0f,
+            0.0f, 1.0f,
+            0.0f, 0.0f,
+    };
+
+    //逆时针270度
+    public static final float TEXTURE_ROTATED_270[] = {
+            1.0f, 0.0f,
+            0.0f, 0.0f,
+            1.0f, 1.0f,
+            0.0f, 1.0f,
+    };
+
 
     /**
      * 获取一个新的原始纹理坐标，每次调用，都会重新创建
      * @return 坐标数组
      */
-    public static float[] getOriginalTextureCo(){
-        return new float[]{
-                0.0f,0.0f,
-                0.0f,1.0f,
-                1.0f,0.0f,
-                1.0f,1.0f
-        };
+    public static float[] getOriginalTextureCo() {
+        return TEXTURE_NO_ROTATION;
+    }
+
+    public static float[] getOriginalTextureCo_90() {
+        return TEXTURE_ROTATED_90;
+    }
+
+    public static float[] getOriginalTextureCo_180() {
+        return TEXTURE_ROTATED_180;
+    }
+
+    public static float[] getOriginalTextureCo_270() {
+        return TEXTURE_ROTATED_270;
     }
 
     /**
